@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteo de Moto 🏍️</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏍️ SORTEO DE MOTO 🏍️</h1>
+            <p class="subtitle">¡Participa y gana una moto increíble!</p>
+        </header>
+
+        <main>
+            <section class="info-section">
+                <div class="info-card">
+                    <h2>📋 Cómo Participar</h2>
+                    <ol>
+                        <li>Ingresa tu nombre completo</li>
+                        <li>Ingresa tu número de teléfono</li>
+                        <li>Haz clic en "Participar"</li>
+                        <li>¡Espera el sorteo!</li>
+                    </ol>
+                </div>
+
+                <div class="info-card">
+                    <h2>🎁 Premio</h2>
+                    <p>Una motocicleta de última generación</p>
+                    <p class="prize-details">Valor aproximado: $5,000 USD</p>
+                </div>
+            </section>
+
+            <section class="participation-section">
+                <div class="form-container">
+                    <h2>Ingresa tus Datos</h2>
+                    <form id="participantForm">
+                        <div class="form-group">
+                            <label for="name">Nombre Completo:</label>
+                            <input type="text" id="name" name="name" required placeholder="Ej: Juan Pérez">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Teléfono:</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="Ej: +1234567890">
+                        </div>
+                        <button type="submit" class="btn-primary">Participar en el Sorteo</button>
+                    </form>
+                </div>
+
+                <div class="participants-container">
+                    <h2>Participantes Registrados (<span id="participantCount">0</span>)</h2>
+                    <div id="participantsList" class="participants-list">
+                        <p class="empty-message">Aún no hay participantes. ¡Sé el primero!</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="raffle-section">
+                <h2>Realizar Sorteo</h2>
+                <button id="raffleButton" class="btn-raffle" disabled>🎲 Sortear Ganador</button>
+                <div id="winnerDisplay" class="winner-display hidden">
+                    <h3>🎉 ¡GANADOR! 🎉</h3>
+                    <p class="winner-name" id="winnerName"></p>
+                    <p class="winner-phone" id="winnerPhone"></p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Sorteo de Moto. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
