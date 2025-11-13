@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sorteo de Moto 0KM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Sorteo de Moto 0KM</h1>
+      <p>Comprá tu número y participá por una increíble moto nueva.</p>
+      <p class="hero-date">Sorteo: 30/12/2025 • Transmisión en vivo</p>
+      <a href="#comprar" class="btn-primary">Comprar números</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="info">
+      <h2>¿Cómo funciona el sorteo?</h2>
+      <div class="grid-2">
+        <div>
+          <h3>1. Elegís la cantidad de números</h3>
+          <p>Cada número tiene un costo de <strong>$5.000</strong>. Mientras más números compres, más chances tenés.</p>
+        </div>
+        <div>
+          <h3>2. Pagás con Mercado Pago</h3>
+          <p>Usamos Mercado Pago para que puedas abonar con tarjeta, débito, efectivo o saldo en cuenta.</p>
+        </div>
+        <div>
+          <h3>3. Recibís tus números</h3>
+          <p>Luego del pago, te enviamos por WhatsApp o email los números asignados.</p>
+        </div>
+        <div>
+          <h3>4. Participás del sorteo</h3>
+          <p>El día del sorteo, transmitimos en vivo y publicamos el ganador en esta página.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section highlight" id="premio">
+      <h2>El premio</h2>
+      <p>Moto XXX 0KM • Modelo 2025 • Papeles al día • Lista para rodar.</p>
+      <p class="small">*Imágenes ilustrativas. Ver bases y condiciones.</p>
+    </section>
+
+    <section class="section" id="comprar">
+      <h2>Comprá tus números</h2>
+      <form id="form-compra" class="card">
+        <label>
+          Nombre y apellido
+          <input type="text" name="nombre" required />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          WhatsApp
+          <input type="tel" name="telefono" required />
+        </label>
+        <label>
+          Cantidad de números
+          <input type="number" name="cantidad" min="1" value="1" required />
+        </label>
+
+        <p class="resumen">
+          Total: <span id="total">$5.000</span>
+        </p>
+
+        <!-- Botón que disparará Mercado Pago -->
+        <button type="submit" class="btn-primary">
+          Pagar con Mercado Pago
+        </button>
+
+        <!-- Contenedor para el botón/checkout de Mercado Pago si usas JS -->
+        <div id="mp-container"></div>
+      </form>
+    </section>
+
+    <section class="section" id="bases">
+      <h2>Bases y condiciones</h2>
+      <p class="small">
+        Aquí van las bases del sorteo: cantidad total de números, fecha y hora del sorteo, 
+        mecanismo de sorteo (por ejemplo, Lotería Nacional), forma de entrega del premio, etc.
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Sorteo Moto 0KM • Organizado por [Tu nombre/empresa]</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

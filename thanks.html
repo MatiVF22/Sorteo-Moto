@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gracias por tu compra</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="section">
+    <div class="card">
+      <h1>¡Gracias por participar!</h1>
+      <p id="mensaje"></p>
+      <a href="./" class="btn-primary">Volver al sorteo</a>
+    </div>
+  </main>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const status = params.get("status");
+    const mensajeEl = document.getElementById("mensaje");
+
+    if (status === "success") {
+      mensajeEl.textContent =
+        "Tu pago fue aprobado. En breve recibirás tus números por WhatsApp o email.";
+    } else if (status === "pending") {
+      mensajeEl.textContent =
+        "Tu pago está pendiente. Te avisaremos cuando se acredite.";
+    } else if (status === "failure") {
+      mensajeEl.textContent =
+        "El pago no se completó o fue rechazado. Podés intentar de nuevo.";
+    } else {
+      mensajeEl.textContent =
+        "Estado desconocido. Si tenés dudas, contactate con nosotros.";
+    }
+  </script>
+</body>
+</html>
